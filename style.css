@@ -228,38 +228,38 @@ h1 {
 }
 
 .artikle {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .onstock {
     background-color: rgba(41, 194, 158, 0.15);
     color: #29C29E;
-
     border-radius: 7px;
     font-weight: 500;
     font-size: 13px;
     padding: 7px 14px 7px 37px;
     display: inline-block;
     position: relative;
-    margin: 0 0 10px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
 }
 
 .onstock:before {
-    position: absolute;
     content: '';
+    position: absolute;
+    background: url("images/checked.png");
+    background-size: cover;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    top: 50%;
-    margin-top: -6px;
+    top: 10px;
     left: 15px;
-    background: var(--itemStock) 50% 50% no-repeat var(--mainColor3);
 }
 
 .price {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
+    margin-bottom: 30px;
 }
 
 .endprice {
@@ -275,6 +275,27 @@ h1 {
     font-size: 20px;
 }
 
+.quantity {
+    margin-bottom: 30px;
+}
+.quantity_button {
+    background: #FFFFFF;
+    border: none;
+    box-shadow: none;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    color: grey;
+}
+
+.quantity_input {
+    width: 50px;
+}
+
 .orderbtn {
     font-weight: 500;
     font-size: 15px;
@@ -283,6 +304,53 @@ h1 {
     padding: 21px 30px;
     color: #fff;
     border: none;
-    background: var(--mainColor1);
-    box-shadow: 7px 7px 30px var(--mainColor1_3);
+    background: #41445C;
+    box-shadow: 7px 7px 30px rgba(65, 68, 92, 0.3);
+    width: 100%;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: all 0.18s linear;
+}
+
+.orderbtn:hover {
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    background: rgba(65, 68, 92, 0.9);
+    transition: all 0.18s linear;
+}
+
+.fastorderbtn {
+    font-weight: 500;
+    font-size: 15px;
+    color: #191919;
+    width: 100%;
+    padding: 19px 25px 19px;
+    border-radius: 10px;
+    line-height: 1.2;
+    border: 2px solid #F8F8F8;
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.18s linear;
+    margin-bottom: 30px;
+}
+
+.fastorderbtn:hover {
+    transition: all 0.18s linear;
+    border: 2px solid #CCCCCC;
+}
+
+.share {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.share a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(25, 25, 25, 0.2);
+    margin-right: 10px;
 }
