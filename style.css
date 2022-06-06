@@ -1,8 +1,11 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+body{
+    
     background-color: #F8F8F8;
     position: relative;
 }
+*:not(.fa){
+    font-family: 'Montserrat', sans-serif;
+} 
 
 header {
     display: flex;
@@ -218,10 +221,10 @@ h1 {
 }
 
 .smallpics > img {
-    height: 100px;
+    min-height: 100px;
     border: 1px solid;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     margin-right: 10px;
 }
 
@@ -241,7 +244,7 @@ h1 {
         position: fixed;
         width: 360px;
         top: 60px;
-        right: 70px;
+        right: 50px;
     }
 }
 
@@ -555,12 +558,17 @@ form.colors{
    
     font-size: 42px;
 }
-.smallpics img{
-    border-radius: 10ox;
+.smallpics img, .smallpics .more-btn{
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 .smallpics img {
     flex: 0 0 calc(25% - 10px);
-    max-width: 25%;
+    max-width: calc(25% - 10px);
+    flex: 0 0 -webkit-calc(25% - 10px);
+    max-width: -webkit-calc(25% - 10px);
+    flex: 0 0 -moz-calc(25% - 10px);
+    max-width: -moz-calc(25% - 10px);
     min-height: auto;
     max-height: none !important;
     object-fit: cover;
@@ -695,7 +703,21 @@ a.btnleftright__btn {
     color: #191919;
     padding: 0 0 8px;
 }
-
+.navbar__btn .white-link{
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__btn .white-link span{
+    font-size: 13px;
+    font-weight: bold;
+}
+a.btnleftright__btn {
+    border-color: #f8f8f8 !important;
+}
 
 
 
@@ -720,6 +742,20 @@ a.btnleftright__btn {
     .header-menu{
         margin-right: auto;
     }
-
-
+    .tabs{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .main {
+        padding-right: 50px;
+    }
+}
+@media all and (max-width: 1260px){
+    .product-inner.flex-row .right-side h1 {
+        font-size: 32px !important;
+        font-weight: 700;
+    }
+    .product-inner.flex-row .left-side {
+        max-width: 382px;
+    }
 }
